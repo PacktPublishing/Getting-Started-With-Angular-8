@@ -1,0 +1,11 @@
+<form class="search-form" (ngSubmit)="onSubmit()">
+  <p><label for="searchBox">Search</label></p>
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="Search...."
+    name="searchField"
+    [(ngModel)]="searchField"
+  />
+  <p><button type="submit">Submit</button></p>
+</form>
