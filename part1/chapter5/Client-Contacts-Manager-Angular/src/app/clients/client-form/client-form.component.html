@@ -1,0 +1,40 @@
+<div class="client-form">
+  <form [formGroup]="clientForm" (ngSubmit)="saveClient()">
+    <p>
+      <label> Firstname </label>
+      <input
+        type="text"
+        name="firstnameTxt"
+        formControlName="firstname"
+        required
+      />
+    </p>
+    <p>
+      <label> Lastname </label>
+      <input
+        type="text"
+        name="lastnameTxt"
+        formControlName="lastname"
+        required
+      />
+    </p>
+    <p>
+      <label> Email </label>
+      <input type="email" name="emailTxt" formControlName="email" required />
+    </p>
+    <p>
+      <label> Telephone </label>
+      <input type="tel" name="telephoneTxt" formControlName="telephoneNumber" />
+    </p>
+    <p>
+      <label> Company Name </label>
+      <input
+        type="text"
+        name="companyTxt"
+        formControlName="companyName"
+        required
+      />
+    </p>
+    <p><button type="submit" [disabled]="!clientForm.valid">Save</button></p>
+  </form>
+</div>
