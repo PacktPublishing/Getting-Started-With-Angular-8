@@ -1,7 +1,8 @@
 .client-form {
   padding-top: 20px;
-  p {
-    font-size: 1.1em;
+  margin-top: 40px;
+  mat-form-field {
+    width: 60%;
   }
   button {
     font: 1em sans-serif;

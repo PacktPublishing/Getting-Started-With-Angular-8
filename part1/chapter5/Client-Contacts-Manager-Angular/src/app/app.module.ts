@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientModule } from './clients/client.module';
 import { CompanyModule } from './company/company.module';
 import { SharedModule } from './shared/shared.module';
+import { CustomMaterialModule } from './custom-material.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CustomMaterialModule,
     ClientModule,
     CompanyModule,
     SharedModule

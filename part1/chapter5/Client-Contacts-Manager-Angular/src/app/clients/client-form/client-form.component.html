@@ -1,40 +1,67 @@
-<div class="client-form">
+<mat-card class="client-form">
+  <mat-card-header>
+    <mat-card-title>Add Client</mat-card-title>
+  </mat-card-header>
   <form [formGroup]="clientForm" (ngSubmit)="saveClient()">
-    <p>
-      <label> Firstname </label>
+    <mat-form-field>
       <input
+        matInput
         type="text"
         name="firstnameTxt"
         formControlName="firstname"
+        placeholder="Firstname..."
         required
       />
-    </p>
-    <p>
-      <label> Lastname </label>
+    </mat-form-field>
+
+    <mat-form-field>
       <input
+        matInput
         type="text"
         name="lastnameTxt"
         formControlName="lastname"
+        placeholder="Lastname..."
         required
       />
-    </p>
-    <p>
-      <label> Email </label>
-      <input type="email" name="emailTxt" formControlName="email" required />
-    </p>
-    <p>
-      <label> Telephone </label>
-      <input type="tel" name="telephoneTxt" formControlName="telephoneNumber" />
-    </p>
-    <p>
-      <label> Company Name </label>
+    </mat-form-field>
+    <mat-form-field>
       <input
-        type="text"
+        matInput
+        type="email"
+        name="emailTxt"
+        formControlName="email"
+        placeholder="Email..."
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="tel"
+        name="telephoneTxt"
+        formControlName="telephoneNumber"
+        placeholder="Telephone..."
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="tel"
         name="companyTxt"
         formControlName="companyName"
+        placeholder="Company Name..."
         required
       />
+    </mat-form-field>
+    <p>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!clientForm.valid"
+      >
+        Save
+      </button>
     </p>
-    <p><button type="submit" [disabled]="!clientForm.valid">Save</button></p>
   </form>
-</div>
+</mat-card>
