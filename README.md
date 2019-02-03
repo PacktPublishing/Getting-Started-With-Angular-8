@@ -1,2 +1,2 @@
-# Learn-Angular-and-Ionic
-Learn Angular and Ionic, Published by Packt
+# Learn Angular 8
+Learn Angular 8, Published by Packt
