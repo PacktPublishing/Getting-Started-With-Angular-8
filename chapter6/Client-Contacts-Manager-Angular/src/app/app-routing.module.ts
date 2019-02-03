@@ -11,6 +11,10 @@ const routes: Routes = [
     component: ClientPageComponent
   },
   {
+    path: 'clients/:id',
+    component: ClientPageComponent
+  },
+  {
     path: 'company',
     component: CompanyPageComponent
   },
