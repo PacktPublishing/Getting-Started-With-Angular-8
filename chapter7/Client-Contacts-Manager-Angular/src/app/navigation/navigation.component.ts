@@ -15,7 +15,6 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {}
 
   goTo(location: string) {
-    console.log(location);
     this.router.navigateByUrl(location);
   }
 }

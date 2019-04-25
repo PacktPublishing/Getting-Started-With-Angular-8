@@ -1,17 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Client } from '../client';
+import { ClientService } from '../client.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-page',
   templateUrl: './client-page.component.html',
-  styleUrls: ['./client-page.component.scss']
+  styleUrls: ['./client-page.component.scss'],
+  providers: [ClientService]
 })
 export class ClientPageComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  clientList: any[];
+
+  constructor(private clientService: ClientService, private router: Router) {}
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
-    console.log('Our passed ID is', id);
+    this.clientService.getClients().subscribe(res => {
+      this.clientList = res;
+    });
+  }
+
+  saveClient(clientDetails: Client) {
+    this.clientService.save(clientDetails).subscribe(client => {
+      this.clientList.push(client);
+      this.router.navigateByUrl('/clients/search');
+    });
   }
 }

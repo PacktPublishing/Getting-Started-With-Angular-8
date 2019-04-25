@@ -1,67 +1,41 @@
 <mat-card class="client-form">
-  <mat-card-header>
-    <mat-card-title>Add Client</mat-card-title>
-  </mat-card-header>
   <form [formGroup]="clientForm" (ngSubmit)="saveClient()">
-    <mat-form-field>
-      <input
-        matInput
-        type="text"
-        name="firstnameTxt"
-        formControlName="firstname"
-        placeholder="Firstname..."
-        required
-      />
-    </mat-form-field>
+    <mat-card-content>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="firstnameTxt"
+          formControlName="firstname"
+          placeholder="Firstname..."
+          required
+        />
+      </mat-form-field>
 
-    <mat-form-field>
-      <input
-        matInput
-        type="text"
-        name="lastnameTxt"
-        formControlName="lastname"
-        placeholder="Lastname..."
-        required
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <input
-        matInput
-        type="email"
-        name="emailTxt"
-        formControlName="email"
-        placeholder="Email..."
-        required
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <input
-        matInput
-        type="tel"
-        name="telephoneTxt"
-        formControlName="telephoneNumber"
-        placeholder="Telephone..."
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <input
-        matInput
-        type="tel"
-        name="companyTxt"
-        formControlName="companyName"
-        placeholder="Company Name..."
-        required
-      />
-    </mat-form-field>
-    <p>
-      <button
-        mat-raised-button
-        color="primary"
-        type="submit"
-        [disabled]="!clientForm.valid"
-      >
+      <mat-form-field>
+        <input matInput type="text" name="lastnameTxt" formControlName="lastname" placeholder="Lastname..." required />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="email" name="emailTxt" formControlName="email" placeholder="Email..." required />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="tel" name="telephoneTxt" formControlName="telephoneNumber" placeholder="Telephone..." />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="tel"
+          name="companyTxt"
+          formControlName="companyName"
+          placeholder="Company Name..."
+          required
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!clientForm.valid">
         Save
       </button>
-    </p>
+    </mat-card-footer>
   </form>
 </mat-card>
