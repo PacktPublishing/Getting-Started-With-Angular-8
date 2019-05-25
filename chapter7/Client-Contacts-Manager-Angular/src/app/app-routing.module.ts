@@ -10,6 +10,7 @@ import { CompanyDetailsPageComponent } from './company/company-details-page/comp
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ClientDetailsPageComponent } from './clients/client-details-page/client-details-page.component';
 import { CompanySearchPageComponent } from './company/company-search-page/company-search-page.component';
+import { CompanyPageComponent } from './company/company-page/company-page.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: 'company/new',
-    component: CompanyFormComponent
+    component: CompanyPageComponent
   },
   {
     path: 'company/search',

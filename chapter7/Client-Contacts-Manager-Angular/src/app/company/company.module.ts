@@ -11,6 +11,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CompanyService } from './company.service';
 import { CompanySearchPageComponent } from './company-search-page/company-search-page.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { CompanyPageComponent } from './company-page/company-page.component';
 
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule, SharedModule, CustomMaterialModule, FormsModule],
@@ -20,7 +21,8 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
     CompanyListComponent,
     CompanyListItemComponent,
     CompanySearchPageComponent,
-    CompanyDetailComponent
+    CompanyDetailComponent,
+    CompanyPageComponent
   ],
   providers: [CompanyService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

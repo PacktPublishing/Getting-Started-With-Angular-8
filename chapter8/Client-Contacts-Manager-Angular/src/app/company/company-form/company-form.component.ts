@@ -37,5 +37,6 @@ export class CompanyFormComponent {
 
   onSubmit() {
     console.log(this.companyForm);
+    
   }
 }

@@ -1,6 +1,5 @@
-<h1>Add a new Company</h1>
 <mat-card class="company-form">
-  <form [formGroup]="companyForm">
+  <form [formGroup]="companyForm" (ngSubmit)="saveCompany()">
     <mat-card-content>
       <mat-form-field>
         <input

@@ -10,6 +10,12 @@ export class CompanyService {
 
   constructor(private httpClient: HttpClient) {}
 
+  // saves a new company to the in memory database
+  save(company: Company) {
+    const url = `${this.companyAPIUrl}`;
+    return this.httpClient.post(url, company);
+  }
+
   // gets all the companies
   getCompanyList(): any {
     const url = `${this.companyAPIUrl}`;
