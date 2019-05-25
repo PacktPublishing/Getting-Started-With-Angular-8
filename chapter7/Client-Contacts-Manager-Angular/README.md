@@ -16,3 +16,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 - Added Services, one for the Client section and one for the Company section
 - Added forms for Adding, Editing and Deleting both Clients and Company's
 - Using angular-in-memory-web-api to store data locally (https://github.com/angular/in-memory-web-api)
+- Added lazy loading of routes
