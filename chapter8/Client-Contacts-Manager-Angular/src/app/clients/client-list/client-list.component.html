@@ -1,0 +1,12 @@
+<mat-list class="client-list">
+  <mat-list-item *ngFor="let client of clients" role="list-item">
+    <span>{{ client.firstname }}</span>
+    <span>{{ client.lastname }}</span>
+    <span>{{ client.email }}</span>
+    <span>{{ client.companyName }}</span>
+    <span>{{ client.telephoneNumber }}</span>
+    <button mat-icon-button (click)="viewClientDetails(client)">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>

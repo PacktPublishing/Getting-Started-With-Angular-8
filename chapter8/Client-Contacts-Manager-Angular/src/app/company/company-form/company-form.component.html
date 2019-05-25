@@ -1,0 +1,78 @@
+<h1>Add a new Company</h1>
+<mat-card class="company-form">
+  <form [formGroup]="companyForm">
+    <mat-card-content>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          formControlName="companyName"
+          name="companyNameTxt"
+          placeholder="Company Name"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          formControlName="addressOne"
+          name="addressOneTxt"
+          placeholder="Address 1"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" formControlName="addressTwo" name="addressTwoTxt" placeholder="Address 2" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" formControlName="town" name="townTxt" placeholder="Town" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" formControlName="city" name="cityTxt" placeholder="City" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" formControlName="postCode" name="postcodeTxt" placeholder="Postcode" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" formControlName="country" name="countryTxt" placeholder="Country" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="email"
+          formControlName="contactEmail"
+          name="contactEmailTxt"
+          placeholder="Contact Email"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          formControlName="staffCount"
+          name="numberOfStaffTxt"
+          placeholder="Number of staff"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" name="industryTxt" placeholder="Industry" />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!companyForm.valid">
+        Save
+      </button>
+    </mat-card-footer>
+  </form>
+</mat-card>

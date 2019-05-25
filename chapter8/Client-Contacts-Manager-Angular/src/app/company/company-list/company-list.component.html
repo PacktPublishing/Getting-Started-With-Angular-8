@@ -1,0 +1,13 @@
+<mat-list class="company-list">
+  <mat-list-item *ngFor="let company of companies">
+    <span>{{ company.companyName }}</span>
+    <span>{{ company.address1 }}</span>
+    <span>{{ company.address2 }}</span>
+    <span>{{ company.city }}</span>
+    <span>{{ company.industry }}</span>
+    <span>{{ company.staffCount }}</span>
+    <button mat-icon-button (click)="viewCompanyDetails(company)">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
