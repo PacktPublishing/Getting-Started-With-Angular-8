@@ -1,45 +1,40 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AboutPageComponent } from './about/about-page/about-page.component';
-import { ClientEditPageComponent } from './clients/client-edit-page/client-edit-page.component';
-import { ClientPageComponent } from './clients/client-page/client-page.component';
-import { ClientSearchPageComponent } from './clients/client-search-page/client-search-page.component';
-import { CompanyFormComponent } from './company/company-form/company-form.component';
-import { CompanyDetailsPageComponent } from './company/company-details-page/company-details-page.component';
+import { ClientModule } from './clients/client.module';
+import { CompanyModule } from './company/company.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ClientDetailsPageComponent } from './clients/client-details-page/client-details-page.component';
-import { CompanySearchPageComponent } from './company/company-search-page/company-search-page.component';
+
 
 const routes: Routes = [
   {
     path: 'clients/new',
-    component: ClientPageComponent
+    loadChildren: './clients/client.module#ClientModule'
   },
   {
     path: 'clients/edit/:id',
-    component: ClientEditPageComponent
+    loadChildren: './clients/client.module#ClientModule'
   },
 
   {
     path: 'clients/search',
-    component: ClientSearchPageComponent
+    loadChildren: './clients/client.module#ClientModule'
   },
   {
     path: 'clients/details/:id',
-    component: ClientDetailsPageComponent
+    loadChildren: './clients/client.module#ClientModule'
   },
   {
     path: 'company/new',
-    component: CompanyFormComponent
+    loadChildren: './company/company.module#CompanyModule'
   },
   {
     path: 'company/search',
-    component: CompanySearchPageComponent
+    loadChildren: './company/company.module#CompanyModule'
   },
   {
     path: 'company/details/:id',
-    component: CompanyDetailsPageComponent
+    loadChildren: './company/company.module#CompanyModule'
   },
   {
     path: 'about',
@@ -57,7 +52,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ClientModule, CompanyModule],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

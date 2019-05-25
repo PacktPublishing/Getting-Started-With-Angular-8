@@ -41,7 +41,7 @@ export class ClientFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.client) {
+    if (this.client) {
       console.log(this.client);
     }
   }
