@@ -18,11 +18,9 @@ export class ClientEditPageComponent implements OnInit {
   constructor(private clientService: ClientService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.paramMap.get('id'));
     const clientId = this.route.snapshot.paramMap.get('id')
-    this.clientService.getClientByID(clientId).subscribe((result) => {
-      console.log(result)
-      this.client = result;
+    this.clientService.getClientByID(clientId).subscribe((res: Client) => {
+      this.client = res;
     });
   }
 

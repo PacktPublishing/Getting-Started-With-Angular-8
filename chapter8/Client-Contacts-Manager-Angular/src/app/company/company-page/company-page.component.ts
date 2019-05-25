@@ -14,13 +14,13 @@ export class CompanyPageComponent implements OnInit {
     constructor(private companyService: CompanyService, private router: Router) { }
 
     ngOnInit() {
-        this.companyService.getCompanyList().subscribe(res => {
+        this.companyService.getCompanyList().subscribe((res: Company[]) => {
             this.companyList = res;
         })
     }
 
     saveCompany(companyDetails: Company) {
-        this.companyService.save(companyDetails).subscribe(company => {
+        this.companyService.save(companyDetails).subscribe((company: Company) => {
             this.companyList.push(company);
             this.router.navigateByUrl('/company/search');
 

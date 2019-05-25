@@ -15,8 +15,7 @@ export class CompanyDetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     const companyID = this.route.snapshot.paramMap.get('id');
-    this.companyService.getCompanyByID(companyID).subscribe(res => {
-      console.log(res);
+    this.companyService.getCompanyByID(companyID).subscribe((res: Company) => {
       this.selectedCompany = res;
     });
   }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Client } from '../client';
 
@@ -7,7 +7,7 @@ import { Client } from '../client';
   templateUrl: './client-form.component.html',
   styleUrls: ['./client-form.component.scss']
 })
-export class ClientFormComponent implements OnInit {
+export class ClientFormComponent {
   // new FormGroup is defined here
   clientForm: FormGroup;
 
@@ -38,12 +38,6 @@ export class ClientFormComponent implements OnInit {
       telephoneNumber: this.telephoneNumber,
       companyName: this.companyName
     });
-  }
-
-  ngOnInit() {
-    if (this.client) {
-      console.log(this.client);
-    }
   }
 
   // event called when form is submitted, displaying the output of the form
