@@ -35,6 +35,7 @@ export class CompanyFormComponent implements OnInit {
   country = new FormControl('');
   contactEmail = new FormControl('', Validators.required);
   staffCount = new FormControl('');
+  industry = new FormControl('')
 
   constructor(fb: FormBuilder) {
     this.companyForm = fb.group({
@@ -46,7 +47,8 @@ export class CompanyFormComponent implements OnInit {
       postCode: this.postCode,
       country: this.country,
       contactEmail: this.contactEmail,
-      staffCount: this.staffCount
+      staffCount: this.staffCount,
+      industry: this.industry
     });
 
   }
@@ -63,8 +65,8 @@ export class CompanyFormComponent implements OnInit {
   private createCompany(form: FormGroup) {
     const companyObject: Company = {
       companyName: form.value.companyName,
-      address1: form.value.address1,
-      address2: form.value.address2,
+      address1: form.value.addressOne,
+      address2: form.value.addressTwo,
       town: form.value.town,
       city: form.value.city,
       postcode: form.value.postCode,
