@@ -1,0 +1,11 @@
+.search {
+  margin: 5px;
+
+  .search-form {
+    width: 100%;
+    mat-form-field {
+      width: 80%;
+      padding: 15px;
+    }
+  }
+}
