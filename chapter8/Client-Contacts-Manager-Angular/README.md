@@ -13,7 +13,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 # Changes in this version
 
-- Added Services, one for the Client section and one for the Company section
-- Added forms for Adding, Editing and Deleting both Clients and Company's
-- Using angular-in-memory-web-api to store data locally (https://github.com/angular/in-memory-web-api)
-- Added lazy loading of routes
+- Updated both the Client and Company services to show that Observables are being returned from the HttpClient calls
+- Updated both the Client Edit form and the Company Edit form to Reactive forms
+- Used RxJs in the Search Form Component so it now starts searching as you type
+- Added OnChanges lifecycle hook to both the Client and Company edit forms in order to populate a Reactive form with the data passed in from the parent Component
