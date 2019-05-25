@@ -1,6 +1,6 @@
 # ClientContactsManagerAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8
 
 ## Development server
 
@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Changes in this verison
+
+- This is the initial project created by the Angular CLI, this can be used to explore the structure of an Angular project. 
