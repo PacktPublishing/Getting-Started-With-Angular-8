@@ -11,7 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 
-# Changes in this version
+## Changes in this version
 
 - Added Services, one for the Client section and one for the Company section
 - Added forms for Adding, Editing and Deleting both Clients and Company's
