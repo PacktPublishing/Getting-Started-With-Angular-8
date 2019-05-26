@@ -13,7 +13,5 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 # Changes in this version
 
-- Updated both the Client and Company services to show that Observables are being returned from the HttpClient calls
-- Updated both the Client Edit form and the Company Edit form to Reactive forms
-- Used RxJs in the Search Form Component so it now starts searching as you type
-- Added OnChanges lifecycle hook to both the Client and Company edit forms in order to populate a Reactive form with the data passed in from the parent Component
+- Updates to all test files so they run. This involved updating the providers and imports for the tests
+- Added tests to the Client Service to show how a service can be tested
