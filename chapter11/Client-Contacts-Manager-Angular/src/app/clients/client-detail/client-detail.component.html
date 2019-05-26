@@ -1,0 +1,45 @@
+<mat-card *ngIf="!editView">
+  <mat-card-header>
+    <h1>{{ client?.firstname }} {{ client?.lastname }}</h1>
+  </mat-card-header>
+
+  <mat-card-subtitle>
+    <h2>{{ client?.companyName }}</h2>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p>Email: {{ client?.email }}</p>
+    <p>Telephone: {{ client?.telephoneNumber }}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <button (click)="edit()" mat-raised-button color="primary">Edit</button>
+    <button (click)="searchAll()" mat-raised-button color="primary">Search All Clients</button>
+    <button (click)="delete(client)" mat-raised-button color="warn">Delete</button>
+  </mat-card-footer>
+</mat-card>
+
+<mat-card *ngIf="editView">
+  <form [formGroup]="clientEditForm">
+  <mat-card-header>
+    <mat-form-field>
+      <input matInput type="text" name="firstname" formControlName="firstname" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" name="lastname" formControlName="lastname" />
+    </mat-form-field>
+  </mat-card-header>
+  <mat-card-subtitle>
+    <h2>{{ client?.companyName }}</h2>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput type="text" name="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" name="telephone" formControlName="telephoneNumber" />
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-footer>
+    <button mat-button mat-raised-button color="primary" (click)="save()">Save</button>
+  </mat-card-footer>
+</form>
+</mat-card>

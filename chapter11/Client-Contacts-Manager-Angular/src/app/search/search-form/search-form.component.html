@@ -1,0 +1,14 @@
+<mat-card class="search">
+  <form class="search-form" [formGroup]="searchForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        id="searchBox"
+        placeholder="{{ title }}"
+        name="searchField"
+        formControlName="searchBox"
+      />
+    </mat-form-field>
+  </form>
+</mat-card>
