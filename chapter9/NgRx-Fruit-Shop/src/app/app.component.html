@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+</div>
+
+<section class="container">
+  <p>Total Number of Apples in Store: {{ (applesInStore$ | async)?.applesCount }}</p>
+
+  <button (click)="addApples(1)">Add an Apple</button>
+  <button (click)="removeApples(1)">Remove an Apple</button>
+  <button (click)="removeAllApples(0)">Remove All Apples</button>
+</section>
+
+<router-outlet></router-outlet>
